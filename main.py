@@ -10,7 +10,7 @@ import sys
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-#Parametros por usuario
+#User parameters
 params = dict()
 PROJECT_PORFOLIO = "ProjectPortfolio"
 USER_NAME = "UserName"
@@ -20,7 +20,7 @@ updater = Updater(settings.token)
 dispatcher = updater.dispatcher
 
 def getParams(bot, update):
-    #Valida la existencia de los parámetros iniciales
+    #Validate if exists the initial parameters
     if (PROJECT_PORFOLIO not in params or USER_NAME not in params):
         dbConnection = None
         try:

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03582380-201b-4e12-9470-71fb011c27d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
     </list>
     <ignored path="ArchitectureBot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,25 +47,25 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+            <state relative-caret-position="204">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1481493102000" expanded="true" signature="936:971" placeholder="SELECT * FRO... PARAMS" />
-                <marker date="1481493102000" expanded="true" signature="936:1006" placeholder="SELECT * FRO... PARAMS" />
-                <marker date="1481493102000" expanded="true" signature="3484:3519" placeholder="SELECT * FRO... PARAMS" />
-                <marker date="1481493102000" expanded="true" signature="3484:3596" placeholder="SELECT * FRO... PARAMS" />
-                <marker date="1481493102000" expanded="true" signature="3484:3597" placeholder="SELECT * FRO... PARAMS" />
-                <marker date="1481493102000" expanded="true" signature="3696:6096" placeholder="INSERT INTO PARAMS... " />
-                <marker date="1481493102000" expanded="true" signature="3851:3948" placeholder="UPDATE PARAM... " />
-                <marker date="1481493102000" expanded="true" signature="3851:3952" placeholder="UPDATE PARAM... " />
-                <marker date="1481493102000" expanded="true" signature="3851:3991" placeholder="UPDATE PARAM... " />
-                <marker date="1481493102000" expanded="true" signature="3851:3992" placeholder="UPDATE PARAM... " />
-                <marker date="1481493102000" expanded="true" signature="3857:3948" placeholder="SELECT * FRO... PARAMS" />
-                <marker date="1481493102000" expanded="true" signature="4029:4090" placeholder="INSERT INTO PARAMS... " />
-                <marker date="1481493102000" expanded="true" signature="4029:4154" placeholder="INSERT INTO PARAMS... " />
-                <marker date="1481493102000" expanded="true" signature="4029:4171" placeholder="INSERT INTO PARAMS... " />
-                <marker date="1481493102000" expanded="true" signature="4029:4173" placeholder="INSERT INTO PARAMS... " />
+                <marker date="1481585750000" expanded="true" signature="922:957" placeholder="SELECT * FRO... PARAMS" />
+                <marker date="1481585750000" expanded="true" signature="922:992" placeholder="SELECT * FRO... PARAMS" />
+                <marker date="1481585750000" expanded="true" signature="3470:3505" placeholder="SELECT * FRO... PARAMS" />
+                <marker date="1481585750000" expanded="true" signature="3470:3582" placeholder="SELECT * FRO... PARAMS" />
+                <marker date="1481585750000" expanded="true" signature="3470:3583" placeholder="SELECT * FRO... PARAMS" />
+                <marker date="1481585750000" expanded="true" signature="3682:6082" placeholder="INSERT INTO PARAMS... " />
+                <marker date="1481585750000" expanded="true" signature="3837:3934" placeholder="UPDATE PARAM... " />
+                <marker date="1481585750000" expanded="true" signature="3837:3938" placeholder="UPDATE PARAM... " />
+                <marker date="1481585750000" expanded="true" signature="3837:3977" placeholder="UPDATE PARAM... " />
+                <marker date="1481585750000" expanded="true" signature="3837:3978" placeholder="UPDATE PARAM... " />
+                <marker date="1481585750000" expanded="true" signature="3843:3934" placeholder="SELECT * FRO... PARAMS" />
+                <marker date="1481585750000" expanded="true" signature="4015:4076" placeholder="INSERT INTO PARAMS... " />
+                <marker date="1481585750000" expanded="true" signature="4015:4140" placeholder="INSERT INTO PARAMS... " />
+                <marker date="1481585750000" expanded="true" signature="4015:4157" placeholder="INSERT INTO PARAMS... " />
+                <marker date="1481585750000" expanded="true" signature="4015:4159" placeholder="INSERT INTO PARAMS... " />
               </folding>
             </state>
           </provider>
@@ -91,6 +90,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -437,27 +437,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1481493102000" expanded="true" signature="936:971" placeholder="SELECT * FRO... PARAMS" />
-            <marker date="1481493102000" expanded="true" signature="936:1006" placeholder="SELECT * FRO... PARAMS" />
-            <marker date="1481493102000" expanded="true" signature="3484:3519" placeholder="SELECT * FRO... PARAMS" />
-            <marker date="1481493102000" expanded="true" signature="3484:3596" placeholder="SELECT * FRO... PARAMS" />
-            <marker date="1481493102000" expanded="true" signature="3484:3597" placeholder="SELECT * FRO... PARAMS" />
-            <marker date="1481493102000" expanded="true" signature="3696:6096" placeholder="INSERT INTO PARAMS... " />
-            <marker date="1481493102000" expanded="true" signature="3851:3948" placeholder="UPDATE PARAM... " />
-            <marker date="1481493102000" expanded="true" signature="3851:3952" placeholder="UPDATE PARAM... " />
-            <marker date="1481493102000" expanded="true" signature="3851:3991" placeholder="UPDATE PARAM... " />
-            <marker date="1481493102000" expanded="true" signature="3851:3992" placeholder="UPDATE PARAM... " />
-            <marker date="1481493102000" expanded="true" signature="3857:3948" placeholder="SELECT * FRO... PARAMS" />
-            <marker date="1481493102000" expanded="true" signature="4029:4090" placeholder="INSERT INTO PARAMS... " />
-            <marker date="1481493102000" expanded="true" signature="4029:4154" placeholder="INSERT INTO PARAMS... " />
-            <marker date="1481493102000" expanded="true" signature="4029:4171" placeholder="INSERT INTO PARAMS... " />
-            <marker date="1481493102000" expanded="true" signature="4029:4173" placeholder="INSERT INTO PARAMS... " />
+            <marker date="1481585750000" expanded="true" signature="922:957" placeholder="SELECT * FRO... PARAMS" />
+            <marker date="1481585750000" expanded="true" signature="922:992" placeholder="SELECT * FRO... PARAMS" />
+            <marker date="1481585750000" expanded="true" signature="3470:3505" placeholder="SELECT * FRO... PARAMS" />
+            <marker date="1481585750000" expanded="true" signature="3470:3582" placeholder="SELECT * FRO... PARAMS" />
+            <marker date="1481585750000" expanded="true" signature="3470:3583" placeholder="SELECT * FRO... PARAMS" />
+            <marker date="1481585750000" expanded="true" signature="3682:6082" placeholder="INSERT INTO PARAMS... " />
+            <marker date="1481585750000" expanded="true" signature="3837:3934" placeholder="UPDATE PARAM... " />
+            <marker date="1481585750000" expanded="true" signature="3837:3938" placeholder="UPDATE PARAM... " />
+            <marker date="1481585750000" expanded="true" signature="3837:3977" placeholder="UPDATE PARAM... " />
+            <marker date="1481585750000" expanded="true" signature="3837:3978" placeholder="UPDATE PARAM... " />
+            <marker date="1481585750000" expanded="true" signature="3843:3934" placeholder="SELECT * FRO... PARAMS" />
+            <marker date="1481585750000" expanded="true" signature="4015:4076" placeholder="INSERT INTO PARAMS... " />
+            <marker date="1481585750000" expanded="true" signature="4015:4140" placeholder="INSERT INTO PARAMS... " />
+            <marker date="1481585750000" expanded="true" signature="4015:4157" placeholder="INSERT INTO PARAMS... " />
+            <marker date="1481585750000" expanded="true" signature="4015:4159" placeholder="INSERT INTO PARAMS... " />
           </folding>
         </state>
       </provider>
