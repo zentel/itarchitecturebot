@@ -7,7 +7,7 @@ import sqlite3
 import sys
 
 #Logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.WARNING)
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 #User parameters
@@ -19,34 +19,36 @@ USER_NAME = "UserName"
 updater = Updater(settings.token)
 dispatcher = updater.dispatcher
 
-def getParams(bot, update):
+def getParams(update):
     #Validate if exists the initial parameters
-    if (PROJECT_PORFOLIO not in params or USER_NAME not in params):
+    logger.debug("LEN: %d",len(params))
+    if (len(params)<=0):
         dbConnection = None
         try:
             dbConnection = sqlite3.connect(settings.database)
             cursor = dbConnection.cursor()
-            query = "SELECT * FROM PARAMS WHERE CHAT_ID=" + str(update.message.chat_id) + ""
-            rows = cursor.fetchall()
-            logger.warning(rows.count())
-            if rows.count() > 0:
-                for row in rows:
-                    params[row["Param_Name"]] = row[["Param_Value"]]
+            cursor.execute("SELECT Param_Name, Param_Value FROM PARAMS WHERE CHAT_ID=" + str(update.message.chat_id))
+            row = cursor.fetchone()
+
+            if row is not None:
+                while row is not None:
+                    params[row[0]] = row[1]
+                    row = cursor.fetchone()
+                return True
             else:
                 return False
         except sqlite3.Error as e:
             logger.error("%s", e.args[0])
-            sys.exit(1)
+            return False
         finally:
             if dbConnection:
                 dbConnection.close()
-            return False
     return True
 
 def start(bot, update):
     #Home message
     msg = "Hello {user_name}! I'm {bot_name}. \n"
-    if (getParams(bot, update)):
+    if (getParams(update)):
         msg+= "We are working on the project portfolio *{project_portfolio}*, with the user *{user}*"
         # Send the message
         bot.send_message(chat_id=update.message.chat_id,
@@ -60,20 +62,32 @@ def start(bot, update):
         msg += "Please, use /setprojectportfolio <name> To set the project portfolio \n"
         msg += "And use /setUserName <name> To set the user name \n"
         bot.send_message(chat_id=update.message.chat_id,
-                         text=msg.format(
-                             user_name=update.message.from_user.first_name,
-                             bot_name=bot.name
-                         ),
+                         text=msg.format(user_name=update.message.from_user.first_name,
+                         bot_name=bot.name),
                          parse_mode=ParseMode.MARKDOWN)
+
+def showParameters(bot, update):
+    #Return the parameters
+    msg = ""
+    if getParams(update):
+        msg = "*Your Parameters:* \n"
+        for k in params:
+            msg += "_"+ k + "_: " + params[k] + "\n"
+    else:
+        msg = "You don't have any parameters. Please use help for guidance"
+    bot.send_message(chat_id=update.message.chat_id,
+                     text = msg,
+                     parse_mode=ParseMode.MARKDOWN)
 
 def help(bot, update):
     #Help message
     msg = "*Commands:* \n"
-    msg += "/projects - List your projects \n"
-    msg += "/addproject <projectname> - Add a project \n"
+    #msg += "/projects - List your projects \n"
+    #msg += "/addproject <projectname> - Add a project \n"
     msg += "/help - This message  \n"
     msg += "/setprojectportfolio <name> - set the project portfolio \n"
     msg += "/setusername <name> - set the user name \n"
+    msg += "/showparameters - Shows you the parameters of the bot \n"
 
     # Send the message
     bot.send_message(chat_id=update.message.chat_id,
@@ -179,7 +193,8 @@ def error_callback(bot, update, error):
 dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(CommandHandler('help', help))
 dispatcher.add_handler(CommandHandler('setprojectportfolio', setProjectPortfolio, pass_args=True))
-dispatcher.add_handler(CommandHandler('setusername', setProjectPortfolio, pass_args=True))
+dispatcher.add_handler(CommandHandler('setusername', setUserName, pass_args=True))
+dispatcher.add_handler(CommandHandler('showparameters', showParameters))
 dispatcher.add_error_handler(error_callback)
 dispatcher.add_handler(MessageHandler(Filters.command, unknown))
 
